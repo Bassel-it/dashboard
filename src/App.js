@@ -22,15 +22,16 @@ function App() {
             <button
             type="button"
             onClick={()=>setThemeSettings(true)}
-            className="text-2xl  text-white p-3 hover:drop-shadow-xl
+            className="text-2xl hover:bg-transparent  p-3 hover:drop-shadow-xl
              hover:bg-light-gray"
-            style={{backgroundColor : currentColor , borderRadius : '55%'}}>
+            style={{ color : currentColor ,  borderRadius : '55%'}}>
               <FiSettings/>
             </button>
           </TooltipComponent>
         </div>
         {activeMenu?
-       (<div style={{backgroundColor : theme}} className="w-72 fixed sidebar dark:bg-secondary-dark-bg
+       (<div style={{backgroundColor : theme}} className="w-72 fixed sidebar
+        dark:bg-secondary-dark-bg
          "><Sidebar/></div>)
        :(<div className="w-0 dark:bg-secondary-dark-bg">
        <Sidebar/>
@@ -41,7 +42,7 @@ function App() {
       navbar w-full'>
         <Navbar/>
       </div>
-     <div>
+     <div >
       {themeSettings&&<ThemeSettings/>}
       <Routes>
         {/* Dashboard */}

@@ -2,6 +2,8 @@ import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
 
+console.log(localStorage.getItem('themeMode'))
+
 const initialState = {
   chat: false,
   cart: false,
@@ -12,9 +14,9 @@ const initialState = {
 export const ContextProvider = ({ children }) => {
  
   const [screenSize, setScreenSize] = useState(undefined);
-  const [currentColor, setCurrentColor] = useState('#03C9D7');
-  const [currentMode, setCurrentMode] = useState('Dark');
-  const [theme, setTheme] = useState('#fff' );
+  const [currentColor, setCurrentColor] = useState(()=>(localStorage.getItem("colorMode")?localStorage.getItem("colorMode"):'#03C9D7')) ;
+  const [currentMode, setCurrentMode] = useState(()=>(localStorage.getItem("themeMode")?localStorage.getItem("themeMode"):'Light') );
+  const [theme, setTheme] = useState(()=>(    currentMode == 'Dark' ? '#33373E' : '#fff'));
   const [themeSettings, setThemeSettings] = useState(false);
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);

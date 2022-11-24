@@ -7,10 +7,10 @@ import { useStateContext } from '../contexts/ContextProvider';
 import avatar from '../data/avatar.jpg';
 
 const UserProfile = () => {
-  const { currentColor } = useStateContext();
+  const { currentColor, theme} = useStateContext();
 
   return (
-    <div className="nav-item absolute right-1 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-96">
+    <div style={{backgroundColor : theme}} className="nav-item absolute right-1 top-16 p-8 rounded-lg w-96">
       <div className="flex justify-between items-center">
         <p className="font-semibold text-lg dark:text-gray-200">User Profile</p>
         <Button

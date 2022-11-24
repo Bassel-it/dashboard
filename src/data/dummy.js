@@ -2561,8 +2561,8 @@ export const scheduleData = [
     Id: 24,
     Subject: 'Facts of Humming Birds',
     Location: 'California',
-    StartTime: '2021-01-16T07:00:00.000Z',
-    EndTime: '2021-01-16T09:00:00.000Z',
+    StartTime: Date.now,
+    EndTime: Date.now,
     CategoryColor: '#7fa900',
   },
 ];
