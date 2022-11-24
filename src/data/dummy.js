@@ -21,7 +21,6 @@ import product4 from './product4.jpg';
 import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
-import product8 from './product8.jpg';
 
 export const gridOrderImage = (props) => (
   <div>
@@ -2561,8 +2560,8 @@ export const scheduleData = [
     Id: 24,
     Subject: 'Facts of Humming Birds',
     Location: 'California',
-    StartTime: Date.now,
-    EndTime: Date.now,
+    StartTime: '2022-11-15T09:00:00.000Z',
+    EndTime: '2022-11-15T10:30:00.000Z',
     CategoryColor: '#7fa900',
   },
 ];

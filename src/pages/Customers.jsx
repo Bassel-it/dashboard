@@ -1,17 +1,17 @@
-import React, { createRef, useRef, useEffect, useState } from 'react';
+import React, {  useRef, useEffect, useState } from 'react';
 import { GridComponent, ColumnsDirective, ColumnDirective, 
-  DataResult, DataSourceChangedEventArgs ,Grid,
-  Page, Selection, Inject, Edit, Toolbar, Sort, Filter, restoreFocus }
+  // DataResult, DataSourceChangedEventArgs ,Grid,restoreFocus ,
+  Page, Selection, Inject, Edit, Toolbar, Sort, Filter  }
    from '@syncfusion/ej2-react-grids';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { BiErrorCircle } from 'react-icons/bi';
-import { DataManager, UrlAdaptor } from '@syncfusion/ej2/data';
-import { customersData, customersGrid } from '../data/dummy';
-import database from '../customer.json'
+// import { DataManager, UrlAdaptor } from '@syncfusion/ej2/data';
+// import { customersData, customersGrid } from '../data/dummy';
+// import database from '../customer.json'
 import { Header } from '../components';
-import axios from 'axios';
+// import axios from 'axios';
 import { addOrder,deleteOrder,updateOrder } from '../customertableorder';
-import { GiConsoleController } from 'react-icons/gi';
+// import { GiConsoleController } from 'react-icons/gi';
 
 
 const Customers = () => {
@@ -44,11 +44,11 @@ const Customers = () => {
     }
   }
   const refreshGrid=()=>{
-    fetch("http://localhost:8080/api/customers").
-    then(res=>res.json()).
-    then((d)=>{      
-      return {count :d.length , result : d}}).
-    then((data)=>setData(data.result)).catch(err=> setError(err.message))
+    fetch("http://localhost:8080/api/customers")
+    .then(res=>res.json())
+    .then((d)=>{      
+      return {count :d.length , result : d}})
+      .then((data)=>setData(data.result)).catch(err=> setError(err.message))
 // console.log("refresh done",grid.current.props.dataSource)
   }
   

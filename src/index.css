@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
-/* @import '../node_modules/@syncfusion/ej2-material-dark-theme/styles/material-dark.css'; */
-/* @import '../node_modules/@syncfusion/ej2-grids/styles/bootstrap4.css';
-@import "../node_modules/@syncfusion/ej2-react-inputs/styles/material-dark.css";
-@import "../node_modules/@syncfusion/ej2-react-calendars/styles/material-dark.css";
-@import "../node_modules/@syncfusion/ej2-react-schedule/styles/material.css"; */
+
 body {
     margin: 0;
     padding:0;

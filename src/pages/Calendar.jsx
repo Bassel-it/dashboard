@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, 
   WorkWeek, Month, Agenda, Inject, Resize, DragAndDrop } from '@syncfusion/ej2-react-schedule';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
-
 import { scheduleData } from '../data/dummy';
 import { Header } from '../components';
 
@@ -10,6 +9,7 @@ import { Header } from '../components';
 
 const Scheduler = () => {
   const [scheduleObj, setScheduleObj] = useState();
+
 
   const change = (args) => {
     scheduleObj.selectedDate = args.value;
@@ -31,7 +31,7 @@ const Scheduler = () => {
         ref={(schedule) => setScheduleObj(schedule)}
         selectedDate={new Date(2021, 0, 10)}
         eventSettings={{ dataSource: scheduleData }}
-        // dragStart={onDragStart}
+        dragStart={onDragStart}
         
       >
         <ViewsDirective>
@@ -41,13 +41,13 @@ const Scheduler = () => {
       </ScheduleComponent>
       <div className="mt-5">
         <table
-          style={{ width: '100%', background: 'white' }}
+          style={{ width: '100%' ,background: '#33373E' ,borderRadius : "15px",padding : "7px" }}
         >
           <tbody>
             <tr style={{ height: '50px' }}>
-              <td style={{ width: '100%' }}>
+              <td style={{ width: '100%' ,padding : '7px' }}>
                 <DatePickerComponent
-                  value={new Date(2021, 0, 10)}
+                  value={new Date(2022, 11, 24)}
                   showClearButton={false}
                   placeholder="Current Date"
                   floatLabelType="Always"
