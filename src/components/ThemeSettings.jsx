@@ -11,7 +11,7 @@ const ThemeSettings = () => {
 
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
-      <div style={{backgroundColor : theme , color : currentColor}} className="float-right h-screen dark:text-gray-200  w-400">
+      <div style={{backgroundColor : theme , color : currentColor}} className="float-right h-screen dark:text-gray-200   w-auto     ">
         <div className="flex justify-between items-center p-4 ml-4">
           <p className="font-semibold text-lg">Settings</p>
           <button
@@ -73,7 +73,7 @@ const ThemeSettings = () => {
                     style={{ backgroundColor: item.color }}
                     onClick={() => setColor(item.color)}
                   >
-                    <BsCheck className={`ml-2 text-2xl text-white ${item.color === currentColor ? 'block' : 'hidden'}`} />
+                    <BsCheck className={`ml-2 text-2xl text-white ${item.color === currentColor ? 'block' : 'hidden'} ` } />
                   </button>
                 </div>
               </TooltipComponent>
